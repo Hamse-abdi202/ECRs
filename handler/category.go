@@ -25,11 +25,9 @@ func RegisterCategoryHandler() CategoryHandler {
 	}
 }
 
-// CreateCategoryHandler - POST /categories
 func (h *CategoryHandler) CreateCategoryHandler(c *gin.Context) {
 	var requestBody dtos.AddCategorydtos
 
-	// Bind JSON body
 	err := c.ShouldBindJSON(&requestBody)
 	fmt.Println("from body:", requestBody)
 
@@ -82,7 +80,6 @@ func (h *CategoryHandler) GetCategoriesHandler(c *gin.Context) {
 
 
 
-// PUT /categories/:id
 func (h *CategoryHandler) UpdateCategoryHandler(c *gin.Context) {
     // Get ID from URL
     idParam := c.Param("id")
@@ -99,7 +96,6 @@ func (h *CategoryHandler) UpdateCategoryHandler(c *gin.Context) {
         return
     }
 
-    // Convert idParam to uint
     var id uint
     _, err := fmt.Sscan(idParam, &id)
     if err != nil {

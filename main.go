@@ -12,7 +12,7 @@ func main() {
 	// infra.InitEnv()
 	// config := infra.Configurations
 
-	infra .ConnectedDB()
+	infra.ConnectedDB()
 	// infra.ConnectDB()
 	slog.Info("connected database successfully ✅")
 

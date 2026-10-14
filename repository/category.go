@@ -11,7 +11,7 @@ type CategoryRepo struct {
 
 
 
-func RegisterCategoryRepo(db *gorm .DB) *CategoryRepo{
+func RegisterCategoryRepo(db *gorm.DB) *CategoryRepo{
 	return  &CategoryRepo {
 	DB: db,
 	}
